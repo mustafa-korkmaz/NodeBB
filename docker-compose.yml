@@ -21,7 +21,7 @@ services:
       MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
     volumes:
       - mongo-data:/data/db
-      - ./install/docker/mongodb-user-init.js:/docker-entrypoint-initdb.d/user-init.js
+      - ./install/docker/mongodb-user-init.js:/docker-entrypoint-initdb.d/mongodb-user-init.js
   redis:
     image: redis:8.6.1-alpine
     restart: unless-stopped
@@ -31,18 +31,6 @@ services:
       - redis-data:/data
     profiles:
       - redis
-
-  postgres:
-    image: postgres:18.1-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-    profiles:
-      - postgres
 
 volumes:
   mongo-data:
@@ -58,13 +46,6 @@ volumes:
       o: bind
       type: none
       device: ./.docker/database/redis
-
-  postgres-data:
-    driver: local
-    driver_opts:
-      o: bind
-      type: none
-      device: ./.docker/database/postgresql/data
 
   nodebb-build:
     driver: local
