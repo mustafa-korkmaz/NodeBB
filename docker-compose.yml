@@ -1,7 +1,6 @@
 services:
   nodebb:
-    build: .
-    # image: ghcr.io/nodebb/nodebb:latest
+    image: mute/forum:latest
     restart: unless-stopped
     ports:
       - '4567:4567' # comment this out if you don't want to expose NodeBB to the host, or change the first number to any port you want
@@ -12,19 +11,19 @@ services:
       - ./install/docker/setup.json:/usr/src/app/setup.json
 
   mongo:
-    image: 'mongo:7-jammy'
+    image: 'mongo:8.2.5-noble'
     restart: unless-stopped
     ports:
       - '27017:27017'
     environment:
-      MONGO_INITDB_ROOT_USERNAME: nodebb
-      MONGO_INITDB_ROOT_PASSWORD: nodebb
-      MONGO_INITDB_DATABASE: nodebb
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
     volumes:
       - mongo-data:/data/db
       - ./install/docker/mongodb-user-init.js:/docker-entrypoint-initdb.d/user-init.js
   redis:
-    image: redis:8.4.0-alpine
+    image: redis:8.6.1-alpine
     restart: unless-stopped
     command: ['redis-server', '--appendonly', 'yes', '--loglevel', 'warning']
     # command: ['redis-server', '--save', '60', '1', '--loglevel', 'warning'] # uncomment if you want to use snapshotting instead of AOF
@@ -37,9 +36,9 @@ services:
     image: postgres:18.1-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: nodebb
-      POSTGRES_PASSWORD: nodebb
-      POSTGRES_DB: nodebb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres-data:/var/lib/postgresql/data
     profiles:
