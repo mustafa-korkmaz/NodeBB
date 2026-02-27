@@ -33,7 +33,7 @@ services:
       MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
     volumes:
       - mongo-data:/data/db
-      - ./install/docker/mongodb-user-init.js:/docker-entrypoint-initdb.d/mongodb-user-init.js
+      - ./install/docker/mongodb-user-init.js:/docker-entrypoint-initdb.d/user-init.js
   redis:
     image: redis:8.6.1-alpine
     restart: unless-stopped
