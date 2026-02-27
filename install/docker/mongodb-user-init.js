@@ -1,8 +1,8 @@
 const env = (typeof process !== 'undefined' && process.env) ? process.env : {};
 
-const appDb = env.MONGO_INITDB_DATABASE || 'forum';
-const appUser = env.MONGO_INITDB_ROOT_USERNAME || 'forum';
-const appPassword = env.MONGO_INITDB_ROOT_PASSWORD || 'forum';
+const appDb = env.MONGO_INITDB_DATABASE || 'nodebb';
+const appUser = env.MONGO_INITDB_ROOT_USERNAME || 'nodebb';
+const appPassword = env.MONGO_INITDB_ROOT_PASSWORD || 'nodebb';
 
 db = db.getSiblingDB(appDb);
 db.createUser({
