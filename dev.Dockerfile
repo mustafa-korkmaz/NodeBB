@@ -64,7 +64,9 @@ COPY --from=node_modules_touch --chown=${USER}:${USER} /usr/src/app/ /usr/src/ap
 COPY --from=git --chown=${USER}:${USER} /usr/src/app/ /usr/src/app/
 
 RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh \
+    && sed -i 's/\r$//' /usr/src/app/nodebb \
     && chmod +x /usr/local/bin/entrypoint.sh \
+    && chmod +x /usr/src/app/nodebb \
     && chmod +x /usr/local/bin/tini
 
 # TODO: Have docker-compose use environment variables to create files like setup.json and config.json.

@@ -57,7 +57,9 @@ COPY --from=build --chown=${USER}:${USER} /usr/src/app/ /usr/src/app/install/doc
 COPY --from=build --chown=${USER}:${USER} /usr/bin/tini /usr/src/app/install/docker/entrypoint.sh /usr/local/bin/
 
 RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh \
+    && sed -i 's/\r$//' /usr/src/app/nodebb \
     && chmod +x /usr/local/bin/entrypoint.sh \
+    && chmod +x /usr/src/app/nodebb \
     && chmod +x /usr/local/bin/tini
 
 # TODO: Have docker-compose use environment variables to create files like setup.json and config.json.

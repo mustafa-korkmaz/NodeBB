@@ -6,6 +6,7 @@
 *.html		text
 *.js		text
 *.md		text
+nodebb		text eol=lf
 *.sh		text eol=lf
 
 # Images should be treated as binary
