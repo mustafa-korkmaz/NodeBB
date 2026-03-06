@@ -97,6 +97,7 @@
         "mousetrap": "1.6.5",
         "multer": "2.1.1",
         "nconf": "0.13.0",
+        "nodebb-plugin-sso-google": "3.2.1",
         "nodebb-plugin-2factor": "7.6.1",
         "nodebb-plugin-composer-default": "10.3.23",
         "nodebb-plugin-dbsearch": "6.4.0",
