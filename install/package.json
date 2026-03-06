@@ -29,6 +29,7 @@
     },
     "dependencies": {
         "@adactive/bootstrap-tagsinput": "0.8.2",
+        "@arnaudw38/nodebb-plugin-spam-be-gone": "^1.0.14",
         "@fontsource-utils/scss": "0.2.2",
         "@fontsource/inter": "5.2.8",
         "@fontsource/poppins": "5.2.7",
