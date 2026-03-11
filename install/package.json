@@ -99,8 +99,8 @@
         "nconf": "0.13.0",
         "nodebb-plugin-sso-google": "3.2.1",
         "nodebb-plugin-2factor": "7.6.1",
-        "nodebb-plugin-composer-default": "10.3.25",
-        "nodebb-plugin-dbsearch": "6.4.0",
+        "nodebb-plugin-composer-default": "10.3.26",
+        "nodebb-plugin-dbsearch": "6.4.1",
         "nodebb-plugin-emoji": "6.0.6",
         "nodebb-plugin-emoji-android": "4.1.1",
         "nodebb-plugin-link-preview": "2.2.3",
@@ -109,10 +109,10 @@
         "nodebb-plugin-spam-be-gone": "2.3.2",
         "nodebb-plugin-web-push": "0.7.6",
         "nodebb-rewards-essentials": "1.0.2",
-        "nodebb-theme-harmony": "2.2.48",
+        "nodebb-theme-harmony": "2.2.51",
         "nodebb-theme-lavender": "7.1.21",
-        "nodebb-theme-peace": "2.2.56",
-        "nodebb-theme-persona": "14.2.25",
+        "nodebb-theme-peace": "2.2.57",
+        "nodebb-theme-persona": "14.2.27",
         "nodebb-widget-essentials": "7.0.43",
         "nodemailer": "8.0.1",
         "nprogress": "0.2.0",
@@ -132,7 +132,7 @@
         "rss": "1.2.2",
         "rtlcss": "4.3.0",
         "sanitize-html": "2.17.1",
-        "sass": "1.97.3",
+        "sass": "1.98.0",
         "satori": "0.19.2",
         "sbd": "^1.0.19",
         "semver": "7.7.4",
@@ -144,7 +144,7 @@
         "@socket.io/redis-adapter": "8.3.0",
         "sortablejs": "1.15.7",
         "spdx-license-list": "6.11.0",
-        "terser-webpack-plugin": "5.3.16",
+        "terser-webpack-plugin": "5.4.0",
         "textcomplete": "0.18.2",
         "textcomplete.contenteditable": "0.1.1",
         "timeago": "1.6.7",
@@ -182,7 +182,7 @@
         "smtp-server": "3.18.1"
     },
     "optionalDependencies": {
-        "sass-embedded": "1.97.3"
+        "sass-embedded": "1.98.0"
     },
     "resolutions": {
         "*/jquery": "3.7.1"
